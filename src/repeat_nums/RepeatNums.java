@@ -2,6 +2,10 @@ package repeat_nums;
 
 import java.util.Arrays;
 
+/**
+ * 题目地址：
+ * https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/
+ */
 public class RepeatNums {
 
     public static void main(String[] args) {
