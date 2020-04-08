@@ -1,4 +1,4 @@
-package maximum_depth_of_binary_tree;
+package tree.binary_tree.maximum_depth_of_binary_tree;
 
 /**
  * https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/description/?utm_source=LCUS&utm_medium=ip_redirect_q_uns&utm_campaign=transfer2china
@@ -24,11 +24,11 @@ public class MaxDepBT {
     static int left;
     static int right;
     static int max;
-    static class TreeNode {
-          int val;
-          TreeNode left;
-          TreeNode right;
-          TreeNode(int x) { val = x; }
+    public static class TreeNode {
+          public int val;
+          public TreeNode left;
+          public TreeNode right;
+          public TreeNode(int x) { val = x; }
     }
     public static void main(String[] args) {
         TreeNode node1 = new TreeNode(3);

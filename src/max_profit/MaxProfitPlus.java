@@ -76,4 +76,35 @@ public class MaxProfitPlus {
 
     }
 
+    /**
+     * 这个是看的leetcode的官方题解╮(╯▽╰)╭
+     * 本人能耐不够
+     *
+     *
+     * 这个解法的中心思想就是说，你如果要获得总利润最大，那么一定是让所有的波峰减去所有的波谷
+     * 问题就牵扯到如何去寻找波峰和波谷了
+     * @param prices
+     * @return
+     */
+    private static int maxProfit2(int[] prices) {
+        int valley = prices[0];
+        int peak = prices[0];
+        int maxProfit = 0;
+        int i = 0;
+        while(i < prices.length - 1) {
+            //寻找波谷，下降的终点
+            while(i < prices.length - 1 &&prices[i] >= prices[i + 1]) {
+                i++;
+            }
+            peak = prices[i];
+            //寻找波峰，上升的终点
+            while (i < prices.length - 1 && prices[i] <= prices[i + 1]) {
+                i++;
+            }
+            valley = prices[i];
+            maxProfit += peak - valley;
+        }
+        return maxProfit;
+    }
+
 }
