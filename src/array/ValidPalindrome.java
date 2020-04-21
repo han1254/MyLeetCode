@@ -84,4 +84,30 @@ public class ValidPalindrome {
         return false;
     }
 
+
+    public static boolean isPalindrome2(String s) {
+        for (int i=0, j = s.length() - 1; i < j; i++, j--) {
+            while (i < j && !isLetterOrDigit(s.charAt(i))) {
+                i++;
+            }
+
+            while (i < j && !isLetterOrDigit(s.charAt(j))) {
+                j--;
+            }
+
+            if (toLowerCase(s.charAt(i)) != toLowerCase(s.charAt(j))) return false;
+        }
+
+        return true;
+    }
+
+
+    private static boolean isLetterOrDigit(char c) {
+        return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9');
+    }
+
+    private static char toLowerCase(char c) {
+        return (c >= 'a' && c <= 'z') ? c : (char) (c - 'A' + 'a');
+    }
+
 }
