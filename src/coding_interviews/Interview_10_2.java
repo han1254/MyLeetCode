@@ -41,6 +41,6 @@ public class Interview_10_2 {
         return a;
     }
 
-   
+
 
 }
